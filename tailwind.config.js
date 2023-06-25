@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    // colors: {
+    //   primary: '#63cdfa',
+    //   // ...
+    // },
     extend: {
+      colors: {
+        primary: '#0f172a',
+        textPrimary: '#d5ddee',
+        textSecondary: '#8796ad',
+      },
       animation: {
         text: 'text 5s ease infinite',
       },

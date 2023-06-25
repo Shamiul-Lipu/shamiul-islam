@@ -1,17 +1,24 @@
-
+import { TypeAnimation } from "react-type-animation";
 
 const BannerText = () => {
     return (
-        <div className="text-center py-20 bg-slate-400">
+        <div className="text-center py-20 px-2">
             <h1 className="animate-heading">Hello, I{'\''}m
                 <span className="font-extrabold"> Shamiul Islam <br /></span>
-                <span>Junior Full Stack Developer</span>
+                <TypeAnimation
+                    sequence={['Junior Full Stack', 'Front-end', 500, 'ReactJS', 500]}
+                    preRenderFirstString={true}
+                    deletionSpeed={99}
+                    repeat={Infinity}
+                />
+                <br className="block md:hidden" />
+                <span>Developer</span>
             </h1>
-            <p className="text-gray-600 max-w-lg mx-auto">
-                <span>Transforming Ideas into Reality <br /></span>
-                I am a full stack developer with a passion for building web applications. I have experience in front-end development, back-end development, and full stack development.
+            <p className="max-w-lg mx-auto py-6 font-semibold text-lg md:text-xl text-textPrimary">
+                Welcome to My Full Stack Journey
+
             </p>
-            <button className="px-4 py-2 bg-lime-500 mt-3">Download CV</button>
+            <button className="btn-primary">Download CV</button>
         </div>
     );
 };
