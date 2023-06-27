@@ -2,11 +2,11 @@ import { TypeAnimation } from "react-type-animation";
 import { FaDownload, FaHandshake } from "react-icons/fa";
 const BannerText = () => {
     return (
-        <div className="text-center py-20 px-2">
+        <div id="to-top" className="text-center py-20 px-2">
             <h1 className="animate-heading">Hello, I{'\''}m
                 <span className="font-extrabold"> Shamiul Islam <br /></span>
                 <TypeAnimation
-                    sequence={['Junior Full Stack', 'Front-end', 500, 'ReactJS', 500]}
+                    sequence={['Junior Full Stack', 500, 'Front-end', 500, 'Junior MERN', 500, 'ReactJS', 500]}
                     preRenderFirstString={true}
                     deletionSpeed={99}
                     repeat={Infinity}

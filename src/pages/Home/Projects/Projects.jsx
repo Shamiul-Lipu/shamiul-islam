@@ -4,13 +4,14 @@ import { projetsList } from "./ProjectsList";
 import { FaGithubSquare, FaExternalLinkAlt } from "react-icons/fa";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import { Fade, Slide } from "react-awesome-reveal";
 
 const Projects = () => {
     return (
         <section className="bg-primary py-10">
             <Container>
                 <div>
-                    <h3 className="font-bold text-textPrimary text-3xl text-center">Projects</h3>
+                    <h3 className="font-bold text-textPrimary text-3xl text-center pb-10">Projects</h3>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-5 ">
                     {
@@ -27,20 +28,24 @@ const Projects = () => {
                                     }
                                 </Carousel>
                             </figure>
-                            <div className="flex flex-wrap gap-2 justify-between px-10 py-2 text-primary font-semibold">
-                                <Link target="_blank" to={`${project.githubLink}`} className="flex items-center  justify-center gap-2  px-4 py-2 bg-gradient-to-b from-teal-400 to-teal-800 rounded-xl hover:bg-gradient-to-t hover:from-teal-800 hover:to-teal-800 transition-all"><FaGithubSquare /> Github</Link>
-                                <Link target="_blank" to={`${project.liveLink}`} className="flex gap-2 px-4 py-2 bg-gradient-to-b from-teal-400 to-teal-800 rounded-xl hover:bg-gradient-to-t hover:from-teal-800 hover:to-teal-800 transition-all">Live demo <FaExternalLinkAlt className="w-3" /></Link>
+                            <div className="flex flex-wrap gap-2 justify-center px-10 py-2 text-white  font-semibold">
+                                <Link target="_blank" to={`${project.githubLink}`} className="flex items-center  justify-center gap-2  px-4 py-2 bg-gradient-to-b from-[#1a243d] to-sky-900 rounded-xl border-b-2 border-b-primary hover:underline hover:border-b-2 hover:text-sky-200 hover:border-blue-400 transition-all"><FaGithubSquare /> Github</Link>
+                                <Link target="_blank" to={`${project.liveLink}`} className="flex gap-2 px-4 py-2 bg-gradient-to-b from-[#1a243d] to-sky-900 rounded-xl border-b-2 border-b-primary hover:underline hover:border-b-2 hover:text-sky-200 hover:border-blue-400 transition-all">Live demo <FaExternalLinkAlt className="w-3" /></Link>
                             </div>
                             <div className="card-body items-center text-center py-3">
                                 <h2 className="card-title text-textPrimary">{project.name}</h2>
-                                <ul className="flex flex-wrap justify-center gap-2 ">
-                                    {
-                                        project.techs.map((tech, index) => <li className="px-4 font-semibold text-sm py-2 bg-[#122b39] text-[#59deca] rounded-full" key={index}>{tech}</li>)
-                                    }
-                                </ul>
+                                <Fade cascade duration={500}>
+                                    <ul className="flex flex-wrap justify-center gap-2 ">
+                                        {
+                                            project.techs.map((tech, index) => <li className="px-4 font-semibold text-sm py-2 bg-[#122b39] text-[#59deca] rounded-full" key={index}>{tech}</li>)
+                                        }
+                                    </ul>
+                                </Fade>
                             </div>
-                            <div className="p-4">
-                                <p>{project.description}</p>
+                            <div className="px-10 pb-8">
+                                <Fade duration={3000}>
+                                    <p>{project.description}</p>
+                                </Fade>
                             </div>
                         </div>)
                     }

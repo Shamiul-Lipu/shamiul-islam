@@ -1,6 +1,8 @@
 import { techList } from "./TechList";
 import Marquee from "react-fast-marquee";
 
+import { Fade, Slide } from "react-awesome-reveal";
+
 const Techs = () => {
 
 
@@ -15,18 +17,20 @@ const Techs = () => {
                 gradientWidth={160}
                 pauseOnClick={true}
             >
-                <div className=" py-10 flex flex-row items-center justify-between overflow-x-auto">
-                    {
-                        techList.map((tech, index) => {
-                            return (
-                                <div key={index} className={`text-center font-semibold  text-white px-6 lg:px-12 py-10`}>
-                                    <img className="w-8 mx-auto" src={tech.icon} alt={tech.name} />
-                                    <p className="">{tech.name}</p>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+                <Slide direction="right" triggerOnce='true' duration={1000}>
+                    <div className=" py-10 flex flex-row items-center justify-between overflow-x-auto">
+                        {
+                            techList.map((tech, index) => {
+                                return (
+                                    <div key={index} className={`text-center font-semibold  text-white px-6 lg:px-12 py-10`}>
+                                        <img className="w-8 mx-auto" src={tech.icon} alt={tech.name} />
+                                        <p className="">{tech.name}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </Slide>
             </Marquee>
         </section>
     );

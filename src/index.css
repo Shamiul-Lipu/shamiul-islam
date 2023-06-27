@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+ background-color: #0f172a;
+}
 .active-style {
     @apply font-bold text-lg tracking-wide text-[#59deca] transition-colors duration-200 hover:text-[#38bdf8]
 }

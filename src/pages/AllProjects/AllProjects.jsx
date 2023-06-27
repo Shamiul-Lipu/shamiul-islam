@@ -16,7 +16,7 @@ const AllProjects = () => {
                     </div>
                     <div className="grid grid-cols-1 gap-4 ">
                         {
-                            projetsList.map(project => <div key={project.name} className="hero min-h-full bg-primary">
+                            projetsList.map(project => <div key={project.name} className="hero min-h-full bg-primary border-b-2 border-sky-200">
                                 <div className="hero-content flex-col lg:flex-row">
                                     <Carousel
                                         showArrows={true}
@@ -36,9 +36,9 @@ const AllProjects = () => {
                                             }
                                         </ul>
                                         <p className="py-6">{project.description}</p>
-                                        <div className="flex gap-4 text-primary">
-                                            <Link target="_blank" to={`${project.githubLink}`} className="flex items-center  justify-center gap-2  px-4 py-2 bg-gradient-to-b from-teal-400 to-teal-800 rounded-xl hover:bg-gradient-to-t hover:from-teal-800 hover:to-teal-800 transition-all"><FaGithubSquare /> Github</Link>
-                                            <Link target="_blank" to={`${project.liveLink}`} className="flex gap-2 px-4 py-2 bg-gradient-to-b from-teal-400 to-teal-800 rounded-xl hover:bg-gradient-to-t hover:from-teal-800 hover:to-teal-800 transition-all">Live demo <FaExternalLinkAlt className="w-3" /></Link>
+                                        <div className="flex flex-col md:flex-row gap-4 font-bold text-textPrimary">
+                                            <Link target="_blank" to={`${project.githubLink}`} className="flex items-center  justify-center gap-2  px-4 py-2 bg-gradient-to-b from-[#1a243d] to-sky-900 rounded-xl border-b-2 border-b-primary hover:underline hover:border-b-2 hover:text-sky-200 hover:border-blue-400 transition-all"><FaGithubSquare /> Github</Link>
+                                            <Link target="_blank" to={`${project.liveLink}`} className="flex justify-center gap-2 px-4 py-2 bg-gradient-to-b from-[#1a243d] to-sky-900 rounded-xl border-b-2 border-b-primary hover:underline hover:border-b-2 hover:text-sky-200 hover:border-blue-400 transition-all">Live demo <FaExternalLinkAlt className="w-3" /></Link>
                                         </div>
                                     </div>
                                 </div>
