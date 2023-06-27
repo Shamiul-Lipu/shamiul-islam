@@ -15,8 +15,12 @@
 }
 
 .btn-primary{
-    @apply px-4 py-2 bg-gradient-to-r from-[#59deca] to-[#38bdf8] font-semibold rounded-md shadow-xl shadow-teal-800 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
+    @apply px-4 py-2 bg-gradient-to-r from-[#4ab0db] to-[#59deca]  font-semibold rounded-md shadow-xl shadow-teal-800 transition ease-in-out  hover:transition-all delay-150 hover:-translate-y-1 hover:scale-110 duration-300 text-[#0f172a] cursor-pointer
 }
+.btn-secondary{
+    @apply px-4 py-2 bg-gradient-to-r from-[#59deca] to-[#4ab0db] font-semibold rounded-md shadow-xl shadow-teal-800 transition ease-in-out hover:transition-all delay-150 hover:-translate-y-1 hover:scale-110 duration-300 text-[#0f172a] cursor-pointer
+}
+
 
 /* body dark  #0f172a */
 /* text S blue #38bdf8 */

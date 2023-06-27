@@ -10,6 +10,11 @@ import dolwnLoad from '../../assets/74691-download-icon-set-1.json'
 const Navbar = () => {
     const [dropMenu, setDropMenu] = useState(false)
 
+    const handleScrollToContact = (event) => {
+        event.preventDefault();
+        const contactSection = document.getElementById('contact');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    };
 
     // navitems 
     const navItems = <>
@@ -40,12 +45,12 @@ const Navbar = () => {
                 </NavLink>
             </li>
             <li>
-                <NavLink
-                    to='/contact-me'
-                    className={({ isActive }) => (isActive ? "active-style" : 'default-style')}
+                <Link
+                    to="/#contact" onClick={handleScrollToContact}
+                    className={'default-style'}
                 >
                     Contact me
-                </NavLink>
+                </Link>
             </li>
         </ul>
 
@@ -67,7 +72,7 @@ const Navbar = () => {
                             {/* dropdown toggle button */}
                             <button
                                 onClick={() => setDropMenu(!dropMenu)}
-                                className={`px-2 py-1 border-[3px] border-[#59deca] rounded-lg block md:hidden`}
+                                className={`px-2 py-1 border-[3px] border-[#59deca] rounded-lg block md:hidden transition-all`}
                             >
                                 {dropMenu ? (
                                     <HiXMark

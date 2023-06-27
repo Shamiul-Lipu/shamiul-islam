@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-
+import { FaDownload, FaHandshake } from "react-icons/fa";
 const BannerText = () => {
     return (
         <div className="text-center py-20 px-2">
@@ -18,7 +18,10 @@ const BannerText = () => {
                 Welcome to My Full Stack Journey
 
             </p>
-            <button className="btn-primary">Download CV</button>
+            <div className="flex flex-col md:flex-row justify-center gap-5">
+                <button className="btn-primary flex items-center gap-2 justify-center"><FaDownload /> Download CV</button>
+                <button className="btn-secondary flex items-center gap-2 justify-center">Contact me <FaHandshake /></button>
+            </div>
         </div>
     );
 };

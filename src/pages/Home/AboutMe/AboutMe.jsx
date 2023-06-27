@@ -1,5 +1,10 @@
-import bgImage from '../../../assets/stac.png'
+import bgImage from '../../../assets/layered-waves-haikei.png'
 const AboutMe = () => {
+    const handleScrollToContact = (event) => {
+        event.preventDefault();
+        const contactSection = document.getElementById('contact');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    };
     return (
         <section className={`bg-cover bg-repeat-y pb-10`} style={{ backgroundImage: `url(${bgImage})` }}>
             <div className="container mx-auto px-5 md:px-10 lg:px-20 bg-[#255b61] border-[1px] transition-all hover:bg-[#2c7077] border-[#c1fcff] rounded-lg -mt-16 opacity-70 text-[#c1fcff]">
@@ -17,7 +22,7 @@ const AboutMe = () => {
                             <p className="mb-4">My goal is to make a positive impact through innovative web development solutions. I believe in creating user-centric experiences that combine aesthetic design with efficient functionality.</p>
                             <p className="mb-4">When I'm not working, you can find me exploring the outdoors, experimenting with new recipes in the kitchen, and immersing myself in captivating books. I am constantly seeking new challenges and opportunities to grow both personally and professionally.</p>
                             <p className="mb-4">Feel free to explore my website and get in touch if you have any questions or would like to collaborate.</p>
-                            <a href="#contact" className="inline-block bg-primary text-white py-2 px-4 rounded-md font-medium transition duration-300 hover:bg-primary-dark ">Contact Me</a>
+                            <button onClick={handleScrollToContact} href="" className="inline-block bg-primary text-white py-2 px-4 rounded-md font-medium transition duration-300 hover:bg-primary-dark ">Contact Me</button>
                         </div>
 
                     </div>
