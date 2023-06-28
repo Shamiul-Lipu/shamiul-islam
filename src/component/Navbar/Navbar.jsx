@@ -27,14 +27,14 @@ const Navbar = () => {
                     Home
                 </NavLink>
             </li>
-            <li className=" px-4 py-2 border-b-[4px] border-b-primary rounded-md shadow-sm shadow-cyan-400 hover:border-b-[4px] hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-400 hover:transition-all">
-                <NavLink
-                    to=''
-                    className={({ isActive }) => (isActive ? "active-style flex items-center" : 'default-style flex items-center')}
+            <li className="r">
+                <Link target="_blank"
+                    to='https://drive.google.com/drive/folders/1l7suRmmzdduuCdA9KuFf1rbcIrMn6bEW?usp=drive_link'
+                    className={"default-style flex items-center  px-4 py-2 border-b-[4px] border-b-primary rounded-md shadow-sm shadow-cyan-400 hover:border-b-[4px] hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-400 hover:transition-all cursor-pointe"}
                 >
                     <Lottie className="rounded-full w-8" animationData={dolwnLoad} />
                     Resume
-                </NavLink>
+                </Link>
             </li>
             <li>
                 <NavLink

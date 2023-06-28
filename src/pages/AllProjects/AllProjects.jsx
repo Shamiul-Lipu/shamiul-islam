@@ -9,7 +9,7 @@ const AllProjects = () => {
     return (
         <section className="py-5">
             <Container>
-                <div className="py-10">
+                <div id="to-project-top" className="py-10">
                     <div className="text-center py-5">
                         <h1 className="font-bold text-textPrimary text-3xl text-center">Recent Projects</h1>
                         <p className="text-textSecondary ">Here are some of my projects</p>

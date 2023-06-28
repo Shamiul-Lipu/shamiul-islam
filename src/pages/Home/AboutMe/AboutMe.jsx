@@ -11,11 +11,12 @@ const AboutMe = () => {
 
     return (
         <section className={`bg-cover bg-repeat-y pb-10`} style={{ backgroundImage: `url(${bgImage})` }}>
-            <div className="container mx-auto px-5 md:px-10 lg:px-20 bg-[#255b61] border-[1px] transition-all hover:bg-[#2c7077] border-[#c1fcff] rounded-lg -mt-16 opacity-70 text-[#c1fcff]">
+            <div className="container mx-auto px-5 md:px-10 lg:px-20 bg-[#255b61] border-[1px] transition-all hover:bg-[#2c7077] border-[#c1fcff] rounded-lg -mt-16 opacity-70 text-[#c1fcff] overflow-hidden">
                 <div className="p-5">
-                    <Slide triggerOnce='true'>
-                        <h3 className="text-[#c1fcff] text-3xl font-bold text-center py-3">About Me</h3>
-                        <Fade triggerOnce='true' delay={500} duration={1000} cascade damping='0.5'>
+                    <Slide triggerOnce='true' duration={1000}>
+                        <Fade triggerOnce='true' delay={500} duration={1500} cascade damping='0.5'>
+                            <h3 className="text-[#c1fcff] text-3xl font-bold text-center py-3">About Me</h3>
+
                             <div className="">
 
                                 <div className="flex justify-center items-start">

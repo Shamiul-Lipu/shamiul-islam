@@ -1,6 +1,13 @@
 import { TypeAnimation } from "react-type-animation";
 import { FaDownload, FaHandshake } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const BannerText = () => {
+    const handleScrollToContact = (event) => {
+        event.preventDefault();
+        const contactSection = document.getElementById('contact');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <div id="to-top" className="text-center py-20 px-2">
             <h1 className="animate-heading">Hello, I{'\''}m
@@ -18,9 +25,9 @@ const BannerText = () => {
                 Welcome to My Full Stack Journey
 
             </p>
-            <div className="flex flex-col md:flex-row justify-center gap-5">
-                <button className="btn-primary flex items-center gap-2 justify-center"><FaDownload /> Download CV</button>
-                <button className="btn-secondary flex items-center gap-2 justify-center">Contact me <FaHandshake /></button>
+            <div className="flex flex-col sm:flex-row justify-center gap-5">
+                <button className="btn-primary flex items-center gap-2 justify-center"><FaDownload /> Download Resume</button>
+                <Link to="/#contact" onClick={handleScrollToContact} className="btn-secondary flex items-center gap-2 justify-center">Contact me <FaHandshake /></Link>
             </div>
         </div>
     );

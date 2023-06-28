@@ -3,11 +3,8 @@ import { FaGithub, FaLinkedinIn, FaDev, FaTwitter, FaRegArrowAltCircleUp } from 
 import bgImage from '../../../assets/blob-scene-haikei.png'
 
 const Footer = () => {
-
-    const handleScrollToContact = (event) => {
-        event.preventDefault();
-        const contactSection = document.getElementById('to-top');
-        contactSection.scrollIntoView({ behavior: 'smooth' });
+    const handleScrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
@@ -16,6 +13,7 @@ const Footer = () => {
                 <p className="font-bold">
                     Shamiul Islam <br />
                     Copyright © 2023 - All right reserved</p>
+                <span className="text-[8px]">portfolio version 0.1</span>
             </div>
             <div>
                 <div className="grid grid-flow-col gap-4 list-none">
@@ -33,7 +31,7 @@ const Footer = () => {
                     </li>
                 </div>
             </div>
-            <Link onClick={handleScrollToContact} to="/#to-top" className="cursor-pointer text-cyan-300 text-xs"><FaRegArrowAltCircleUp className="w-6 h-6 animate-bounce" /> Go to top</Link>
+            <a onClick={handleScrollToTop} href="#" className="cursor-pointer text-cyan-300 text-xs"><FaRegArrowAltCircleUp className="w-6 h-6 animate-bounce" /> Go to top</a>
         </footer>
     );
 };
