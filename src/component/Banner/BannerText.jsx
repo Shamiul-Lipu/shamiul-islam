@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-import { FaDownload, FaHandshake } from "react-icons/fa";
+import { FaDownload, FaHandshake, FaLink } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const BannerText = () => {
     const handleScrollToContact = (event) => {
@@ -26,8 +26,9 @@ const BannerText = () => {
 
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-5">
-                <button className="btn-primary flex items-center gap-2 justify-center"><FaDownload /> Download Resume</button>
                 <Link to="/#contact" onClick={handleScrollToContact} className="btn-secondary flex items-center gap-2 justify-center">Contact me <FaHandshake /></Link>
+                <Link target="_blank" to='https://drive.google.com/drive/folders/1l7suRmmzdduuCdA9KuFf1rbcIrMn6bEW?usp=sharing' className="btn-primary flex items-center gap-2 justify-center"> Resume <FaLink /></Link>
+
             </div>
         </div>
     );

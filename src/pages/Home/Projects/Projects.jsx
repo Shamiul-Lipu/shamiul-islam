@@ -13,10 +13,10 @@ const Projects = () => {
                 <div>
                     <h3 className="font-bold text-textPrimary text-3xl text-center pb-10">Projects</h3>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-5 ">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-5 px-2">
                     {
-                        projetsList.map((project, index) => <div key={index} className="card w-full bg-[#1a243d] text-textSecondary shadow-xl">
-                            <figure className="px-10 pt-10">
+                        projetsList.map((project, index) => <div key={index} className="card w-full bg-[#121c33] hover:bg-[#1a243d]   text-textSecondary shadow-xl hover:-translate-y-4 transition-all ease-in-out hover:shadow-2xl hover:shadow-cyan-900">
+                            <figure className="rounded-xl mx-10 mt-10">
                                 <Carousel
                                     showArrows={true}
                                     autoPlay={true}
@@ -28,7 +28,7 @@ const Projects = () => {
                                     }
                                 </Carousel>
                             </figure>
-                            <div className="flex flex-wrap gap-2 justify-center px-10 py-2 text-white  font-semibold">
+                            <div className="flex flex-wrap gap-2 justify-center px-10 pt-5 text-white  font-semibold">
                                 <Link target="_blank" to={`${project.githubLink}`} className="flex items-center  justify-center gap-2  px-4 py-2 bg-gradient-to-b from-[#1a243d] to-sky-900 rounded-xl border-b-2 border-b-primary hover:underline hover:border-b-2 hover:text-sky-200 hover:border-blue-400 transition-all"><FaGithubSquare /> Github</Link>
                                 <Link target="_blank" to={`${project.liveLink}`} className="flex gap-2 px-4 py-2 bg-gradient-to-b from-[#1a243d] to-sky-900 rounded-xl border-b-2 border-b-primary hover:underline hover:border-b-2 hover:text-sky-200 hover:border-blue-400 transition-all">Live demo <FaExternalLinkAlt className="w-3" /></Link>
                             </div>

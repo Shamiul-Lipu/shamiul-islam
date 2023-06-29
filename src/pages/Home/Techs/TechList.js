@@ -17,4 +17,5 @@ export const techList = [
     { name: 'Axios', icon: 'https://avatars.githubusercontent.com/u/32372333?s=40&v=4' },
     { name: 'Stripe', icon: 'https://avatars.githubusercontent.com/u/856813?s=40&v=4' },
     { name: 'Sass', icon: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png?size=48' },
+    { name: 'Figma', icon: 'https://avatars.githubusercontent.com/u/5155369?s=40&v=4' },
 ]
