@@ -55,27 +55,19 @@ const ContactMe = () => {
                                 <div>
                                     <form ref={form} onSubmit={sendEmail}>
                                         <label className="text-textPrimary font-bold mb-2">Name<span className="text-red-400 mx-1">*</span></label>
-                                        <input type="text" name="from_name" className="input w-full px-3 py-2 border rounded-md  focus:outline-[#59deca] my-2 bg-gray-800 border-sky-500 text-textPrimary" required />
+                                        <input type="text" name="from_name" className="input w-full px-3 py-2 rounded-md  focus:outline-[#59deca] my-2 bg-primary border-[2px]  border-sky-950 text-textPrimary" required />
                                         <label className="text-textPrimary font-bold pb-2 ">Email<span className="text-red-400 mx-1">*</span></label>
-                                        <input type="email" name="from_email" className="input w-full px-3 py-2 border rounded-md focus:outline-[#59deca]   my-2 bg-gray-800 border-sky-500  text-textPrimary" required />
+                                        <input type="email" name="from_email" className="input w-full px-3 py-2 rounded-md focus:outline-[#59deca]   my-2 bg-primary border-[2px]  border-sky-950  text-textPrimary" required />
                                         <div className="flex flex-col">
                                             <label className="text-textPrimary font-bold pb-2">Message <span className="text-red-400 mx-1">*</span></label>
-                                            <textarea name="message" className="textarea textarea-info  bg-gray-800 text-textPrimary" required />
+                                            <textarea name="message" className="textarea textarea-info  bg-primary border-[2px] text-textPrimary border-sky-950" required />
                                         </div>
-                                        <input type="submit" value="Send" className="btn-secondary my-4 " />
+                                        <input type="submit" value="Send Message" className="btn-secondary my-4 " />
                                     </form>
                                 </div>
                             </Fade>
                         </Slide>
-                        {/* <form ref={form} onSubmit={sendEmail}>
-                            <label>Name</label>
-                            <input type="text" name="user_name" />
-                            <label>Email</label>
-                            <input type="email" name="user_email" />
-                            <label>Message</label>
-                            <textarea name="message" />
-                            <input type="submit" value="Send" className="text-white" />
-                        </form> */}
+
                     </div>
 
                 </div>

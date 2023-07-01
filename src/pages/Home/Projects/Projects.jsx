@@ -15,7 +15,7 @@ const Projects = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-5 px-2">
                     {
-                        projetsList.map((project, index) => <div key={index} className="card w-full bg-[#121c33] hover:bg-[#1a243d]   text-textSecondary shadow-xl hover:-translate-y-4 transition-all ease-in-out hover:shadow-2xl hover:shadow-cyan-900">
+                        projetsList.map((project, index) => <div key={index} className="card w-full bg-[#121c33] hover:bg-[#1a243d]   text-textSecondary shadow-xl hover:-translate-y-4 transition-all hover:delay-150 ease-in-out hover:shadow-2xl hover:shadow-cyan-900">
                             <figure className="rounded-xl mx-10 mt-10">
                                 <Carousel
                                     showArrows={true}
